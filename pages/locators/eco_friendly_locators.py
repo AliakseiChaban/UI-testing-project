@@ -14,7 +14,8 @@ add_to_cart_btn_loc = (
     By.XPATH, "//li[@class='item product product-item'][12]/descendant::button[@title='Add to Cart']"
 )
 last_clothe_name_loc = (
-By.XPATH, "//li[@class='item product product-item'][12]/descendant::a[@class='product-item-link']")
+    By.XPATH, "//li[@class='item product product-item'][12]/descendant::a[@class='product-item-link']"
+)
 add_success_message_loc = (By.XPATH, "//div[@data-ui-id='message-success']/div")
 
 my_cart_loc = (By.XPATH, "//a[@class='action showcart']")

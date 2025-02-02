@@ -13,9 +13,9 @@ def driver():
     options.add_experimental_option('detach', True)
     chrome_driver = webdriver.Chrome(options=options)
 
-    return chrome_driver
-    # yield chrome_driver
-    # chrome_driver.quit()
+    # return chrome_driver
+    yield chrome_driver
+    chrome_driver.quit()
 
 
 @pytest.fixture()
