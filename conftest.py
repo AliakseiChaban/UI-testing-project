@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
 from pages.create_new_customer import CreateCustomerAccount
 from pages.eco_friendly import EcoFriendlyClothes
+from pages.sale import SalePage
 
 
 @pytest.fixture()
@@ -25,3 +26,8 @@ def create_new_customer_page(driver):
 @pytest.fixture()
 def eco_friendly_page(driver):
     return EcoFriendlyClothes(driver)
+
+
+@pytest.fixture()
+def sale_page(driver):
+    return SalePage(driver)
