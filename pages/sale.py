@@ -15,8 +15,8 @@ class SalePage(BasePage):
         sale_attributes = self.get_attribute(loc.sale_in_navigation_section_loc, "class")
         assert "active" in sale_attributes, "The 'Sale' isn't selected in navigation section"
 
-    def check_sale_page_title(self):
-        assert self.get_text(loc.sale_title_loc) == "Sale"
+    def check_sale_page_title(self, sale_page_name):
+        assert self.get_text(loc.sale_title_loc) == sale_page_name, "The wrong page title"
 
     def open_privacy_policy(self):
         self.click(loc.privacy_btn_loc)
@@ -29,4 +29,4 @@ class SalePage(BasePage):
         list_of_policies = [first, second, third]
 
         for policy in list_of_policies:
-            assert policy == "OFF"
+            assert policy == "OFF", "Policy status is wrong"
